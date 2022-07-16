@@ -1,8 +1,8 @@
 #L.Silaghi
 #10/03/21
 
-print ("          Welcome this is a IMDB film ratings program")
-print('          ***************Liviu Silaghi***************')
+print ("Welcome this is a IMDB film ratings program")
+print("***************Liviu Silaghi***************")
 
 
 def readFile():
