@@ -1,47 +1,47 @@
 #L.Silaghi
 
-print ("Welcome this is a IMDB film ratings program")
+print ("Welcome to my IMDB film ratings program")
 print("***************Liviu Szilagyi***************")
 
 
 def readFile():
     
-    import csv                              #Import csv function
+    import csv                                                              #Import csv function
 
     input("Press Enter to read the files")
 
-    f=open("IMDB films3.csv")               #Opem file in read mode
+    f=open("IMDB films3.csv")                                               #Opem file in read mode
     csvFile=csv.reader(f)
 
-    Films=[]                                #Create empty arrays
+    Films=[]                                                                #Create empty arrays
     Ratings=[]
 
     
-    for row in csvFile:                     #Loop through each row in the file
-        Films.append(row[0])                #Append films and ratings to the arrays
+    for row in csvFile:                                                     #Loop through each row in the file
+        Films.append(row[0])                                                #Append films and ratings to the arrays
         
         Ratings.append(float(row[1])) 
 
-    f.close()                               #Close the file
+    f.close()                                                               #Close the file
 
     print("file handling success")
-    return Films, Ratings                   #Return films and ratings
+    return Films, Ratings                                                   #Return films and ratings
 
     
 
 def displayFile(Films, Ratings):
     input("\nPress Enter to view the files")
-    for i in range(len(Films)):             #Loop for each in films
+    for i in range(len(Films)):                                             #Loop for each in films
         print(i+1,Films[i],Ratings[i])
     return Ratings[i]
 
 
 def occurrence(Ratings):
-    ratingsAbove =9.0                      #Set the searchvalue to target
+    ratingsAbove =9.0                                                       #Set the searchvalue to target
 
     count = 0
-    for i in Ratings:                       #Loop through ratings
-        if i >= ratingsAbove:               #If bigger value was found add 1 to count
+    for i in Ratings:                                                       #Loop through ratings
+        if i >= ratingsAbove:                                               #If bigger value was found add 1 to count
             count=count+1
             
 
@@ -54,7 +54,7 @@ def occurrence(Ratings):
     input("Press Enter to exit")
     
     
-Films, Ratings=readFile()                   #Main program
+Films, Ratings=readFile()                                                   #Main program
 displayFile(Films, Ratings)
 occurrence(Ratings)
 
